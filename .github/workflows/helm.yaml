@@ -28,6 +28,15 @@ jobs:
       - name: Install Helm
         uses: azure/setup-helm@v3
 
+      # https://github.com/murz-helm-charts/murz-helm-charts/blob/5098a941604390e5abfa545c3c4b4b152b2732d9/.github/workflows/release.yml#L23C7-L29C70
+      # https://github.com/helm/chart-releaser-action/issues/74#issuecomment-778787114
+      - name: Add dependencies
+        run: |
+          # for dir in charts/*; do (cd $dir && helm dependency update); done
+          # This should work automatically? Issue https://github.com/helm/chart-releaser-action/issues/6
+
+          helm repo add bitnami https://charts.bitnami.com/bitnami
+
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.5.0
         env:
