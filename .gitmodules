@@ -1,0 +1,6 @@
+[submodule "charts/Brambling-Note-BE-Java-User"]
+	path = charts/Brambling-Note-BE-Java-User
+	url = git@github.com:Brambling-Apps/brambling-note-helm-chart.git
+[submodule "charts/brambling-note-helm-chart"]
+	path = charts/brambling-note-helm-chart
+	url = git@github.com:Brambling-Apps/brambling-note-helm-chart.git
