@@ -7,7 +7,7 @@ Add repo to Helm:
 helm repo add brambling-note https://helm.atri.app
 ```
 
-Install Helm Chart. For example (More about values.yaml please see links below):
+Install Helm Chart. For example (more about `values.yaml` please see links below):
 ```bash
 helm install brambling-note brambling-note/brambling-note-be-java -f values.yaml
 ```
